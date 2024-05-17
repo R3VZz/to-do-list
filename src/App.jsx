@@ -29,13 +29,25 @@ const App = () => {
     setTodos(storedTasks);
   }
 
+  const editTask = (index, newTask) => {
+    const newTodos = todos.map((todo, i) => (
+      i === index ? {...todo, task: newTask } : todo
+    ));
+    setTodos(newTodos);
+  }
+
   return (
     <div className="App">
       <h1>ToDo List</h1>
+      <Help />
       <ToDoTracker tasksCompleted={tasksCompleted} totalTasks={totalTasks} />
       <Form addTask={addTask} />
-      <ToDoList todos={todos} toggleTaskCompletion={toggleTaskCompletion} deleteTask={deleteTask}/>
-      <Help />
+      <ToDoList 
+        todos={todos} 
+        toggleTaskCompletion={toggleTaskCompletion} 
+        deleteTask={deleteTask}
+        editTask={editTask}  
+      />
     </div>
   );
 }

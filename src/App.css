@@ -6,7 +6,6 @@ html, body {
   background-color: #1c2124;
   color: #fff;
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 100vw;
 }
@@ -22,7 +21,7 @@ button {
 .App {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 80%;
 }
 
 .todotracker {
@@ -37,7 +36,7 @@ button {
 }
 
 .todotracker div {
-  padding: 10px 0px 10px 0px;
+  padding: 0px 0px 10px 0px;
 }
 
 .todotracker div:last-child {
@@ -55,8 +54,6 @@ button {
 
 .form {
   align-self: center;
-  width: 90%;
-  max-width: 455px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -67,6 +64,7 @@ button {
   background-color: #282e36;
   color: white;
   height: 50px;
+  width: 375px;
   border-radius: 16px;
   padding: 12px;
 }
@@ -76,30 +74,115 @@ button {
   color: white;
   width: 90px;
   height: 80px;
-  border-radius: 16px;
   background: linear-gradient(#2953af, #1a276e);
   border: 3px solid #ffffff;
+  border-radius: 16px;
+}
+
+.edit-task-form {
+  background-color: #282e36;
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.form button:hover {
+  color: antiquewhite;
+  font-size: 17px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: start;
+  gap: 5px;
 }
 
 .list {
-  width: 100%;
+  width: 700px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: center;
+  gap: 15px;
+  list-style-type: none;
 }
 
-.list-item span {
+.list-item  {
+  max-width: 500px;
   padding: 10px;
   font-size: 25px;
   cursor: pointer;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.list-item:hover {
+  font-weight: bold;
+  color: antiquewhite;
+}
+
+strike {
+  color: rgb(57, 192, 245);
+  
+}
+
+strike:hover {
+  font-weight: bold;
 }
 
 .list-item button {
   font-family: Pixelify Sans;
   color: white;
-  width: 90px;
-  height: 70px;
-  border-radius: 16px;
+  width: 75px;
+  height: 40px;
+  border-radius: 10px;
   background: linear-gradient(#2953af, #1a276e);
   border: 3px solid #ffffff;
+}
+
+.list-item button:hover {
+  color: antiquewhite;
+  font-size: 14px;
+}
+
+.help-text {
+  text-align: center;
+}
+
+
+/* layout for mobile */
+@media (max-width: 480px) {
+  .form {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .form input {
+    width: 200px;
+  }
+
+  .form button {
+    width: 230px;
+    height: 60px;
+  }
+
+  .list {
+    width: 100%;
+  }
+  
+  .list-item {
+    font-size: 18px;
+    padding: 16px;
+  }
+
+  .list-item button {
+    width: 35%;
+    font-size: 12px;
+  }
+
+  .todotracker div:last-child {
+    font-size: 24px;
+    width: 100%;
+    padding: 3px;
+  }
 }
