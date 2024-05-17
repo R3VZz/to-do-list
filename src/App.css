@@ -1,38 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+/* Use  -  Pixelify Sans  -  to target font */
+
+html, body {
+  font-family: Pixelify Sans;
+  background-color: #1c2124;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+h1 {
+  align-self: center;
+}
+
+button {
+  cursor: pointer;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todotracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  align-self: center;
+  max-width: 455px;
+  margin-bottom: 12px;
+  border-radius: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todotracker div {
+  padding: 10px 0px 10px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todotracker div:last-child {
+  background: linear-gradient(#2953af, #1a276e);
+  width: 500px;
+  border: 3px solid #ffffff;
+  border-radius: 16px;
+  font-size: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+}
+
+.form {
+  align-self: center;
+  width: 90%;
+  max-width: 455px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.form input {
+  border: 3px solid #ffffff;
+  background-color: #282e36;
   color: white;
+  height: 50px;
+  border-radius: 16px;
+  padding: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+.form button {
+  font-family: Pixelify Sans;
+  color: white;
+  width: 90px;
+  height: 80px;
+  border-radius: 16px;
+  background: linear-gradient(#2953af, #1a276e);
+  border: 3px solid #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list-item span {
+  padding: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.list-item button {
+  font-family: Pixelify Sans;
+  color: white;
+  width: 90px;
+  height: 70px;
+  border-radius: 16px;
+  background: linear-gradient(#2953af, #1a276e);
+  border: 3px solid #ffffff;
 }
